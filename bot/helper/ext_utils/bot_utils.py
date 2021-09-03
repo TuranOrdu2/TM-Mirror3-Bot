@@ -145,7 +145,7 @@ def get_readable_message():
                     else:
                         msg += f"\n<b>⬇️ Downloaded:</b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
                     msg += f"\n<b>🚀 Speed:</b> <code>{download.speed()}</code>" \
-                            f", <b>📟 ETA:</b> <code>{download.eta()}</code> "
+                            f"\n <b>📟 ETA:</b> <code>{download.eta()}</code> "
                     # if hasattr(download, 'is_torrent'):
                     try:
                         msg += f"\n<b>⚓ Seeders:</b> <code>{download.aria_download().num_seeders}</code>" \
@@ -157,7 +157,7 @@ def get_readable_message():
                             f" | <b>🧲 Leechers:</b> <code>{download.torrent_info().num_leechs}</code>"
                     except:
                         pass
-                    msg += f"\n<b>❌ To Stop:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                    msg += f"\n<b>⛔ To Stop:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
                 msg += "\n\n"
                 if STATUS_LIMIT is not None and INDEX >= COUNT + STATUS_LIMIT:
                     break
