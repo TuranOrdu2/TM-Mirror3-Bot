@@ -675,7 +675,7 @@ class GoogleDriveHelper:
 
         for content in self.telegraph_content :
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                    title = ' DTO Mirror Bot Search ,
+                                                    title = ' DTO Mirror Bot Search ',
                                                     author_name='Özü Sözü Türk🇦🇿',
                                                     author_url='https://t.me/Turkish41',
                                                     html_content=content
